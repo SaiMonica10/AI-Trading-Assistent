@@ -4,7 +4,7 @@ import pandas as pd
 def get_stock_data(symbol: str, period: str = "6mo") -> pd.DataFrame:
     """
     Fetch historical OHLCV data for a stock.
-    period options: 1mo, 3mo, 6mo, 1y, 2y
+    period options: 1mo, 3mo, 6mo, 1y, 2y.
     """
     ticker = yf.Ticker(symbol)
     df = ticker.history(period=period)
